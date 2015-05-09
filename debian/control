@@ -1,0 +1,19 @@
+Source: rdbtools
+Maintainer: Merlijn van Deen <valhallasw@arctus.nl>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 8)
+Standards-Version: 3.9.3
+
+Package: python-rdbtools
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-redis (>= 2.4.12)
+Description: Utilities to convert Redis RDB files to JSON or SQL formats
+ .
+ Rdbtools is a parser for Redis' dump.rdb files. The parser generates events similar to an xml sax parser, and is very efficient memory wise.
+ .
+ In addition, rdbtools provides utilities to :
+ .
+  1. Generate a Memory Report of your data across all databases and keys
+  2. Convert dump files to JSON
+  3. Compare two dump files using standard diff tools
